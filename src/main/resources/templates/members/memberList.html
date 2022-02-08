@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th = "http://www.thymeleaf.org">
+
+<body>
+<div class = "container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- 템플릿 엔진이 렌더링 해주는 과정 -->
+            <tr th:each="member : ${members}">
+                <!--members 리스트에서 값 하나씩 꺼내와서 member에 담아주는 것 반복 -->
+                <td th:text = "${member.id}"></td>
+                <td th:text = "${member.name}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
