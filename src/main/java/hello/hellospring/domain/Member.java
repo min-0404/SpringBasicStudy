@@ -8,8 +8,9 @@ import javax.persistence.Id;
 @Entity // 이제부터 애는 JPA가 관리하는 엔티티구나 !! 라고 선언
 public class Member {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) // id 에 해당하는 어노테이션들
     private long id;
+
     private String name;
 
     public long getId(){

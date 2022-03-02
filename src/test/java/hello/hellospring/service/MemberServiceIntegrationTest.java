@@ -17,8 +17,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @Transactional // 테스트 끝날때, 디비에 널어줬던 데이터들 싹 다 삭제해줌
 class MemberServiceIntegrationTest {
 
-    @Autowired MemberService memberService; // test는 대충 해도 되서 그냥 필드 주입
-    @Autowired MemberRepository memberRepository; // test는 대충 해도 되서 그냥 필드 주입
+    @Autowired MemberService memberService; // 테스트는 대충 해도 되서 그냥 필드 주입
+    @Autowired MemberRepository memberRepository; // 테스트는 대충 해도 되서 그냥 필드 주입
 
     @Test
     void 회원가입() {
@@ -41,6 +41,7 @@ class MemberServiceIntegrationTest {
 
         Member member2 = new Member();
         member2.setName("spring");
+
         // when
         memberService.join(member1);
         IllegalStateException e = assertThrows(IllegalStateException.class, () -> memberService.join(member2));
@@ -53,11 +54,6 @@ class MemberServiceIntegrationTest {
         //}catch (IllegalStateException e){
         //    assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다. 12345");
         //}
-
-        // then
-
-
-
     }
 
     @Test

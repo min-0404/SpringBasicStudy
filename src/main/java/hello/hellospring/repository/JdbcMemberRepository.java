@@ -12,7 +12,7 @@ import java.util.Optional;
 public class JdbcMemberRepository implements MemberRepository {
 
     private final DataSource dataSource; // 선언만
-    // DataSource는 DB에서 가져온 데이터를 말함
+    // DataSource 는 DB에서 가져온 데이터를 말함
 
     public JdbcMemberRepository(DataSource dataSource){ // DataSource 객체를 생성자 주입으로 DI해줌
         this.dataSource = dataSource;

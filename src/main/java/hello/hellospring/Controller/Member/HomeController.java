@@ -1,4 +1,4 @@
-package hello.hellospring.Controller;
+package hello.hellospring.Controller.Member;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
     @GetMapping("/")
     public String home(){
-        return "home"; // home.html 찾아감
+        return "members/home";
     }
 }
